@@ -113,29 +113,23 @@ const IndexPage = () => {
             <strong>effective</strong>, and <strong>unique</strong> to us.
           </P>
 
-          <P>Our main promises are to...</P>
+          <H2 gutterBottom>Our Priorities</H2>
           <P paragraph>
-            <ul style={{ marginTop: 4 }}>
+            <ul>
               <li>
-                conduct a <strong>second EU referendum</strong> to follow the
-                latest will of the people;
+                Boost funding in the NHS, hire more staff, decrease A&E waiting
+                times;
               </li>
               <li>
-                make <strong>Africa by Toto</strong> the country's{" "}
-                <strong>national anthem</strong>;
+                Reform the education system, improve classroom standards,
+                provide more teaching jobs;
               </li>
               <li>
-                introduce an annual <strong>Despicable Me Day</strong>, where
-                everyone wears Despicable Me cosplay, and spends all day
-                watching all the Despicable Me movies and spinoffs;
+                Invest in mental health improvement schemes, reflecting our
+                country's changing needs;
               </li>
-              <li>
-                award <strong>Mr Rodriguez and Shaun Donnelly</strong>{" "}
-                (Freesciencelessons) with <strong>OBEs</strong>;
-              </li>
-              <li>
-                reform the National Curriculum and the{" "}
-                <strong>UK education system</strong>;
+              <li style={{ fontWeight: 900 }}>
+                Redesign the country for the many, not the few;
               </li>
             </ul>
           </P>

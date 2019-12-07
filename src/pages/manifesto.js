@@ -83,6 +83,10 @@ const ManifestoPage = () => {
                 <strong>UK education system</strong>;
               </li>
               <li>
+                change the <strong>national anthem</strong> to{" "}
+                <strong>Africa by Toto</strong>;
+              </li>
+              <li>
                 <strong>remove tax loopholes</strong> currently exploited by the
                 rich;
               </li>
