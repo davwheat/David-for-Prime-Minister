@@ -1,34 +1,65 @@
+/* eslint-disable */
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `David for PM`,
+    description: `Vote David for your next Oathall Prime Minister. "If nothing else, we're radical."`,
+    author: `@davwheat`,
+    siteUrl: "https://david4pm.co.uk",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-material-ui`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        stylesProvider: {
+          injectFirst: true,
+        },
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        name: `David for PM`,
+        short_name: `David4PM`,
+        start_url: `/?utm_source=pwa`,
+        background_color: `#000000`,
+        theme_color: `#7C0000`,
+        display: `standalone`, // no browser ui
+        icon: `src/images/fist-transparent_small_sq.png`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        features: {
+          auth: false,
+          database: false,
+          firestore: false,
+          storage: false,
+          messaging: false,
+          functions: false,
+          analytics: true,
+        },
+        credentials: {
+          apiKey: "AIzaSyCKEaK9XKAaaOx77xyCZ5o3fC0gMjNyjpg",
+          authDomain: "david-for-pm.firebaseapp.com",
+          databaseURL: "https://david-for-pm.firebaseio.com",
+          projectId: "david-for-pm",
+          storageBucket: "david-for-pm.appspot.com",
+          messagingSenderId: "1057366173215",
+          appId: "1:1057366173215:web:fafbc43a64fad92325572a",
+          measurementId: "G-406XJLDHX6",
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        // exclude: [`/admin`],
+      },
+    },
   ],
 }
