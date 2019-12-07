@@ -35,7 +35,8 @@ const useStyles = makeStyles(theme => ({
       left: theme.spacing(),
       position: "sticky",
       width: "calc((100% - 960px) / 2)",
-      maxWidth: 250,
+      minWidth: 250,
+      maxWidth: `max-content`,
     },
   },
   panelOpen: {
