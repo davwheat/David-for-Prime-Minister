@@ -4,31 +4,32 @@ import { makeStyles, useTheme } from "@material-ui/core"
 import { H4, P2, H2 } from "../EasyText"
 import xolor from "xolor"
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100vw",
-    position: "relative",
-    left: "50%",
-    right: "50%",
-    marginLeft: "-50vw",
-    marginRight: "-50vw",
-    marginBottom: theme.spacing(4),
-    display: "flex",
-    flexDirection: "row",
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
+const useStyles = stats =>
+  makeStyles(theme => ({
+    root: {
+      width: "100vw",
+      position: "relative",
+      left: "50%",
+      right: "50%",
+      marginLeft: "-50vw",
+      marginRight: "-50vw",
+      marginBottom: theme.spacing(4),
+      display: "flex",
+      flexDirection: "row",
+      [theme.breakpoints.down("sm")]: {
+        flexDirection: "column",
+      },
     },
-  },
-  stat: {
-    minHeight: 150,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    flexBasis: "calc(100% / 3)",
-    "&>*": { flexBasis: 1 },
-  },
-}))
+    stat: {
+      minHeight: 150,
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      flexBasis: `calc(100% / ${stats.length})`,
+      "&>*": { flexBasis: 1 },
+    },
+  }))
 
 function getRandomColorInt(i, c) {
   const max = c === 1 ? 35 : -15,
@@ -53,8 +54,8 @@ function intToValidColorInt(i) {
   }
 }
 
-export default function TripleStatsBox({ baseColor, stats }) {
-  const classes = useStyles()
+export default function StatisticsBoxes({ baseColor, stats }) {
+  const classes = useStyles(stats)()
   const theme = useTheme()
 
   const base = xolor(baseColor)
@@ -121,7 +122,7 @@ export default function TripleStatsBox({ baseColor, stats }) {
   )
 }
 
-TripleStatsBox.propTypes = {
+StatisticsBoxes.propTypes = {
   baseColor: PropTypes.string.isRequired,
   stats: PropTypes.arrayOf(
     PropTypes.exact({
