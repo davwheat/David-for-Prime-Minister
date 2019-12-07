@@ -33,7 +33,7 @@ const IndexPage = () => {
       <PageNavSidebar
         menuItems={[
           { text: "Foreword", anchor: "#foreword" },
-          { text: "Manifesto", anchor: "#manifesto" },
+          { text: "Our Priorities", anchor: "#priorities" },
           { text: "The Team", anchor: "#the-team" },
         ]}
       />
@@ -106,14 +106,12 @@ const IndexPage = () => {
 
         <hr className="custom" />
 
-        <section id="manifesto" className={classes.semiBoldStrongs}>
-          <H1 gutterBottom>Manifesto</H1>
+        <section id="priorities" className={classes.semiBoldStrongs}>
+          <H1 gutterBottom>Our Priorities</H1>
           <P paragraph>
-            Our campaign promises are <strong>simple</strong>,{" "}
+            Our campaign priorities are <strong>simple</strong>,{" "}
             <strong>effective</strong>, and <strong>unique</strong> to us.
           </P>
-
-          <H2 gutterBottom>Our Priorities</H2>
           <P paragraph>
             <ul>
               <li>
@@ -134,8 +132,8 @@ const IndexPage = () => {
             </ul>
           </P>
           <P paragraph>
-            For explanations and our full manifesto, read our{" "}
-            <Link to="manifesto">manifesto page</Link>.
+            For our full manifesto, extended descriptions, and explanations,
+            read our <Link to="manifesto">manifesto page</Link>.
           </P>
         </section>
 
