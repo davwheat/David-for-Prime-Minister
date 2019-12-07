@@ -33,9 +33,9 @@ const ManifestoPage = () => {
       >
         <ToHome />
         <section id="manifesto">
-          <H1 gutterBottom>Campaign Promises</H1>
+          <H1 gutterBottom>Manifesto</H1>
           <P paragraph>
-            Our campaign promises are <strong>simple</strong>,{" "}
+            Our campaign priorities are <strong>simple</strong>,{" "}
             <strong>effective</strong>, and <strong>unique</strong> to us.
           </P>
 
