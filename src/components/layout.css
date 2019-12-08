@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
 code,
 pre,
 .monospace-font {
@@ -37,8 +39,18 @@ body,
 }
 
 .footer-icon {
-  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+      -ms-transform: translateY(4px);
+          transform: translateY(4px);
   margin-right: 2px;
+}
+
+a.no-underline:-webkit-any-link:hover *, a.no-underline:-webkit-any-link:hover {
+  text-decoration: none !important;
+}
+
+a.no-underline:-moz-any-link:hover *, a.no-underline:-moz-any-link:hover {
+  text-decoration: none !important;
 }
 
 a.no-underline:any-link:hover *,
@@ -113,6 +125,14 @@ hr.custom {
   height: 4px;
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAFCAYAAAAHQL+kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAArSURBVDhPY2xqavrPQGNw6tQppc2bN9+HcmkCmKD0kAejHhlsYJh4hIEBADLACAfgepqCAAAAAElFTkSuQmCC")
     repeat-x center center;
+}
+
+a:-webkit-any-link {
+  font-weight: bolder;
+}
+
+a:-moz-any-link {
+  font-weight: bolder;
 }
 
 a:any-link {

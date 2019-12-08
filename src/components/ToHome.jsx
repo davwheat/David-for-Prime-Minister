@@ -6,7 +6,7 @@ import Link from "./Link"
 
 import BackIcon from "mdi-react/NavigateBeforeIcon"
 
-export default function ToHome() {
+export default function GoBack() {
   const theme = useTheme()
 
   return (
@@ -14,9 +14,13 @@ export default function ToHome() {
       paragraph
       component={Link}
       to=""
+      onClick={e => {
+        window.history.back()
+        e.preventDefault()
+      }}
       style={{ display: "flex", alignItems: "center" }}
     >
-      <BackIcon /> Home
+      <BackIcon /> Back
     </P>
   )
 }

@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import { Container, useTheme } from "@material-ui/core"
 import { H1, P, P2 } from "../components/EasyText"
 import HeroImage from "../components/HeroImage"
-import ToHome from "../components/ToHome"
+import GoBack from "../components/ToHome"
 import PageNavSidebar from "../components/PageSidebar"
 import Link from "../components/Link"
 import { CustomButton } from "../components/material/Button"
@@ -31,7 +31,7 @@ const ManifestoPage = () => {
         maxWidth="md"
         style={{ paddingTop: theme.spacing(4), borderRadius: 8, marginTop: -4 }}
       >
-        <ToHome />
+        <GoBack />
         <section id="manifesto">
           <H1 gutterBottom>Manifesto</H1>
           <P paragraph>
@@ -58,6 +58,9 @@ const ManifestoPage = () => {
             <Link to="priorities/education" className="no-underline">
               <CustomButton size="big">Education</CustomButton>
             </Link>
+            <Link to="priorities/austerity" className="no-underline">
+              <CustomButton size="big">Austerity Reversal</CustomButton>
+            </Link>
           </section>
 
           <P>We will...</P>
@@ -66,6 +69,15 @@ const ManifestoPage = () => {
               <li>
                 conduct a <strong>second EU referendum</strong> to follow the
                 latest will of the people;
+              </li>
+              <li>
+                <strong>
+                  reverse all{" "}
+                  <Link to="priorities/austerity">
+                    Conservative austerity measures
+                  </Link>
+                </strong>
+                ;
               </li>
               <li>
                 introduce legislation to{" "}
@@ -106,7 +118,7 @@ const ManifestoPage = () => {
             trees
           </P2>
         </section>
-        <ToHome />
+        <GoBack />
       </Container>
     </Layout>
   )

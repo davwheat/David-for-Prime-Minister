@@ -41,6 +41,8 @@ const IndexPage = () => {
           marginTop: -4,
         }}
       >
+        <ToHome />
+        
         <section id="introduction">
           <H1 gutterBottom>Investing in Schools</H1>
           <P paragraph style={{ fontWeight: 600 }}>

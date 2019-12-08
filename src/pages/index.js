@@ -126,6 +126,13 @@ const IndexPage = () => {
                 Invest in mental health improvement schemes, reflecting our
                 country's changing needs;
               </li>
+              <li>
+                Reverse{" "}
+                <Link to="priorities/austerity">
+                  Conservative austerity measures
+                </Link>
+                ;
+              </li>
               <li style={{ fontWeight: 900 }}>
                 Redesign the country for the many, not the few;
               </li>
@@ -133,7 +140,7 @@ const IndexPage = () => {
           </P>
           <P paragraph>
             For our full manifesto, extended descriptions, and explanations,
-            read our <Link to="manifesto">manifesto page</Link>.
+            read our <Link to="manifesto">manifesto & priorities page</Link>.
           </P>
         </section>
 

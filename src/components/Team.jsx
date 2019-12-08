@@ -127,7 +127,7 @@ export default function TheTeam() {
         const a = (
           <>
             {person.dense && !isInDense && (
-              <div className={classes.flexBreak} />
+              <div key={i} className={classes.flexBreak} />
             )}
             <div
               key={person.name}

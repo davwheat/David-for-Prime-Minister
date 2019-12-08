@@ -17,11 +17,12 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="NHS" />
+      <SEO title="Austerity Reversal" />
 
       <HeroImage
-        customImg={require("../../images/priorities/nhs/doctors-and-nurses.jpg")}
+        customImg={require("../../images/priorities/austerity/protest.jpg")}
         customQuote={`The NHS needs more funding, and we will deliver it.`}
+        customAlt="Image of people at UK anti-austerity protest holding picket signs"
       />
 
       <PageNavSidebar
