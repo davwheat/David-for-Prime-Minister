@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import { H1, P } from "../components/EasyText"
-import ToHome from "../components/ToHome"
+import GoBack from "../components/ToHome"
 import HeroImage from "../components/HeroImage"
 
 import { Container, useTheme } from "@material-ui/core"
@@ -22,10 +22,12 @@ const NotFoundPage = () => {
         maxWidth="md"
         style={{ paddingTop: theme.spacing(4), borderRadius: 8, marginTop: -4 }}
       >
-        <ToHome />
+        <GoBack oneUpUrl={`/`} />
+
         <H1 gutterBottom>Error 404</H1>
         <P paragraph>This page doesn't exist.</P>
-        <ToHome />
+
+        <GoBack oneUpUrl={`/`} />
       </Container>
     </Layout>
   )

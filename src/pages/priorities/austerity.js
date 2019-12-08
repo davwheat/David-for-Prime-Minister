@@ -8,7 +8,7 @@ import { Container, useTheme } from "@material-ui/core"
 import { H1, P, P2, H2 } from "../../components/EasyText"
 import HeroImage from "../../components/HeroImage"
 import PageNavSidebar from "../../components/PageSidebar"
-import ToHome from "../../components/ToHome"
+import GoBack from "../../components/ToHome"
 import StatisticsBoxes from "../../components/material/StatisticsBoxes"
 import { blue } from "@material-ui/core/colors"
 
@@ -37,7 +37,7 @@ const IndexPage = () => {
           marginTop: -4,
         }}
       >
-        <ToHome />
+        <GoBack oneUpUrl={`/manifesto`} />
 
         <section id="introduction">
           <H1 gutterBottom>Work in Progress</H1>
@@ -47,7 +47,7 @@ const IndexPage = () => {
           </P>
         </section>
 
-        <ToHome />
+        <GoBack oneUpUrl={`/manifesto`} />
       </Container>
     </Layout>
   )

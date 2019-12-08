@@ -4,9 +4,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import { Container, useTheme } from "@material-ui/core"
-import { H1, P, P2, H4, H2, H3 } from "../components/EasyText"
+import { H1, P, H4, H3 } from "../components/EasyText"
 import HeroImage from "../components/HeroImage"
-import ToHome from "../components/ToHome"
+import GoBack from "../components/ToHome"
 import PageNavSidebar from "../components/PageSidebar"
 
 import { Player } from "video-react"
@@ -32,7 +32,7 @@ const ManifestoPage = () => {
         maxWidth="md"
         style={{ paddingTop: theme.spacing(4), borderRadius: 8, marginTop: -4 }}
       >
-        <ToHome />
+        <GoBack oneUpUrl={`/`} />
 
         <section id="about">
           <H1 gutterBottom>Who Are We?</H1>
@@ -75,7 +75,8 @@ const ManifestoPage = () => {
           />
           <br />
         </section>
-        <ToHome />
+
+        <GoBack oneUpUrl={`/`} />
       </Container>
     </Layout>
   )

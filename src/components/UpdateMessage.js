@@ -1,8 +1,8 @@
 /* eslint-disable react/display-name */
 // Add this component to your AppContainer (where your app shell is)
 
-import React, { Component, useEffect } from "react"
-import { useSnackbar, withSnackbar } from "notistack"
+import React, { Component } from "react"
+import { withSnackbar } from "notistack"
 import { Button } from "@material-ui/core"
 
 // Check for updates every 15 minutes

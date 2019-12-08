@@ -1,5 +1,7 @@
 {
   "hosting": {
+    "appAssociation": "AUTO",
+    "rewrites": [{ "source": "/go/**", "dynamicLinks": true }],
     "public": "public",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "headers": [

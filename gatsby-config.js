@@ -90,6 +90,6 @@ module.exports = {
       options: {
         // exclude: [`/admin`],
       },
-    },
+    },`gatsby-plugin-remove-trailing-slashes`,
   ],
 }

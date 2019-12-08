@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import { Container, useTheme } from "@material-ui/core"
-import { H1, P, P2, H2 } from "../components/EasyText"
+import { H1, P, P2 } from "../components/EasyText"
 import HeroImage from "../components/HeroImage"
 import Link from "../components/Link"
 import TheTeam from "../components/Team"

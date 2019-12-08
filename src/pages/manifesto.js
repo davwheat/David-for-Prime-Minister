@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import { Container, useTheme } from "@material-ui/core"
-import { H1, P, P2 } from "../components/EasyText"
+import { H1, P, P2, H2 } from "../components/EasyText"
 import HeroImage from "../components/HeroImage"
 import GoBack from "../components/ToHome"
 import PageNavSidebar from "../components/PageSidebar"
@@ -31,7 +31,8 @@ const ManifestoPage = () => {
         maxWidth="md"
         style={{ paddingTop: theme.spacing(4), borderRadius: 8, marginTop: -4 }}
       >
-        <GoBack />
+        <GoBack oneUpUrl={`/`} />
+
         <section id="manifesto">
           <H1 gutterBottom>Manifesto</H1>
           <P paragraph>
@@ -47,6 +48,7 @@ const ManifestoPage = () => {
               flexDirection: "row",
               alignItems: "space-evenly",
               justifyContent: "space-evenly",
+              marginBottom: theme.spacing(3),
               "& > *": {
                 margin: theme.spacing(),
               },
@@ -63,7 +65,8 @@ const ManifestoPage = () => {
             </Link>
           </section>
 
-          <P>We will...</P>
+          <H2 gutterBottom>Our Promises</H2>
+          <P style={{ fontWeight: 900 }}>We will...</P>
           <P paragraph>
             <ul style={{ marginTop: 4 }}>
               <li>
@@ -118,7 +121,8 @@ const ManifestoPage = () => {
             trees
           </P2>
         </section>
-        <GoBack />
+
+        <GoBack oneUpUrl={`/`} />
       </Container>
     </Layout>
   )

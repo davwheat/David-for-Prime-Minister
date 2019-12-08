@@ -36,6 +36,7 @@ import CookieConsent from "react-cookie-consent"
 import theme from "../constants/theme"
 import { ParallaxProvider } from "react-scroll-parallax"
 import ParallaxUpdater from "./ParallaxUpdater"
+import UpdateMessage from "./UpdateMessage"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -127,6 +128,7 @@ const Layout = ({ children }) => {
               )}
             >
               <Box component="main">{children}</Box>
+              <UpdateMessage />
             </SnackbarProvider>
           </div>
 
