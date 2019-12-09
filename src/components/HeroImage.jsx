@@ -12,9 +12,11 @@ const useStyles = makeStyles(() => ({
     position: "relative",
   },
   img: {
-    width: "100%",
+    width: "calc(100% + 26px)",
     height: "100%",
     objectFit: "cover",
+    marginLeft: -13,
+    marginRight: -13,
   },
 }))
 
