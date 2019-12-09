@@ -4,12 +4,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import { Container, useTheme } from "@material-ui/core"
-import { H1, P, H4, H3 } from "../components/EasyText"
+import { H1 } from "../components/EasyText"
 import HeroImage from "../components/HeroImage"
 import GoBack from "../components/ToHome"
-import PageNavSidebar from "../components/PageSidebar"
 
-import { Player } from "video-react"
 import "video-react/dist/video-react.css" // import css
 
 const ManifestoPage = () => {
@@ -33,11 +31,20 @@ const ManifestoPage = () => {
 
         <section id="goneson">
           <H1 gutterBottom>The Boris Johnson Diss Track</H1>
-          <Player
-            playsInline
+
+          <video
+            style={{ display: "block", width: "100%" }}
+            controls
+            disablePictureInPicture
+            draggable="false"
             poster={require("../images/boris/boris-thumbs-up.jpg")}
-            src={require("../images/boris/boris-johnson-diss.mp4")}
-          />
+            preload="auto"
+          >
+            <source
+              src={require("../images/boris/boris-johnson-diss.mp4")}
+              type="video/mp4"
+            />
+          </video>
           <br />
         </section>
 

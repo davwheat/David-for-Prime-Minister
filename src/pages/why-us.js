@@ -9,9 +9,6 @@ import HeroImage from "../components/HeroImage"
 import GoBack from "../components/ToHome"
 import PageNavSidebar from "../components/PageSidebar"
 
-import { Player } from "video-react"
-import "video-react/dist/video-react.css" // import css
-
 const ManifestoPage = () => {
   const theme = useTheme()
 
@@ -68,11 +65,20 @@ const ManifestoPage = () => {
           </P>
 
           <H4 gutterBottom>Boris Johnson Diss Track</H4>
-          <Player
-            playsInline
+
+          <video
+            style={{ display: "block", width: "100%" }}
+            controls
+            disablePictureInPicture
+            draggable="false"
             poster={require("../images/boris/boris-thumbs-up.jpg")}
-            src={require("../images/boris/boris-johnson-diss.mp4")}
-          />
+            preload="auto"
+          >
+            <source
+              src={require("../images/boris/boris-johnson-diss.mp4")}
+              type="video/mp4"
+            />
+          </video>
           <br />
         </section>
 
