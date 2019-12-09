@@ -110,7 +110,7 @@ export default function StatisticsBoxes({ baseColor, stats }) {
           </H2>
           <P2
             style={{
-              fontWeight: 900,
+              fontWeight: 700,
               color: theme.palette.getContrastText(colors[i]),
             }}
           >
