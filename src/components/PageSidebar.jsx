@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     marginTop: theme.spacing(2),
     overflow: "hidden",
-    zIndex: 9999,
+    zIndex: 999,
     [theme.breakpoints.down("md")]: {
       position: "fixed",
       top: 72,
