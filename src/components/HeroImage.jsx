@@ -10,6 +10,7 @@ const useStyles = makeStyles(() => ({
     height: 600,
     overflow: "hidden",
     position: "relative",
+    willChange: "transform",
   },
   img: {
     width: "calc(100% + 26px)",
@@ -78,7 +79,7 @@ export default function HeroImage({ customImg, customAlt, customQuote }) {
     <>
       <Parallax
         className={classes.hero}
-        styleInner={{ height: "100%", width: "100%" }}
+        styleInner={{ height: "100%", width: "100%", willChange: "transform" }}
         tagOuter="div"
         y={[-75, 50]}
       >
