@@ -9,8 +9,8 @@ import HeroImage from "../components/HeroImage"
 
 import BackIcon from "mdi-react/NavigateBeforeIcon"
 
-import "video-react/dist/video-react.css" // import css
 import Link from "../components/Link"
+import DissTrackVideo from "../components/DissTrackVideo"
 
 const ManifestoPage = () => {
   const theme = useTheme()
@@ -45,37 +45,9 @@ const ManifestoPage = () => {
             prevent the continuation of Conservative austerity.
           </P>
 
-          <video
-            style={{ display: "block", width: "100%" }}
-            controls
-            disablePictureInPicture
-            autobuffer
-            playsInline
-            draggable="false"
-            poster={require("../images/boris/boris-thumbs-up.jpg")}
-            preload="auto"
-            onClick={e => {
-              e.target.play()
-            }}
-          >
-            <source
-              src={require("../images/boris/boris-johnson-diss.mp4")}
-              type="video/mp4"
-            />
-            <source
-              src={require("../images/boris/boris-johnson-diss.webm")}
-              type="video/webm"
-            />
-          </video>
-          <br />
+          <DissTrackVideo />
 
-          <P paragraph>
-            If the video won't play, click{" "}
-            <Link to={require("../images/boris/boris-johnson-diss.mp4")}>
-              this link
-            </Link>
-            .
-          </P>
+          <br />
 
           {/* <!-- Sharingbutton Facebook --> */}
           <a

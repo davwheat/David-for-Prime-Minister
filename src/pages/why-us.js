@@ -8,6 +8,8 @@ import { H1, H3, H4, P, P2 } from "../components/EasyText"
 import HeroImage from "../components/HeroImage"
 import GoBack from "../components/ToHome"
 import PageNavSidebar from "../components/PageSidebar"
+import Link from "../components/Link"
+import DissTrackVideo from "../components/DissTrackVideo"
 
 const ManifestoPage = () => {
   const theme = useTheme()
@@ -66,37 +68,8 @@ const ManifestoPage = () => {
 
           <H4 gutterBottom>Boris Johnson Diss Track</H4>
 
-          <video
-            style={{ display: "block", width: "100%" }}
-            controls
-            disablePictureInPicture
-            autobuffer
-            playsInline
-            draggable="false"
-            poster={require("../images/boris/boris-thumbs-up.jpg")}
-            preload="auto"
-            onClick={e => {
-              e.target.play()
-            }}
-          >
-            <source
-              src={require("../images/boris/boris-johnson-diss.mp4")}
-              type="video/mp4"
-            />
-            <source
-              src={require("../images/boris/boris-johnson-diss.webm")}
-              type="video/webm"
-            />
-          </video>
-          <br />
-
-          <P paragraph>
-            If the video won't play, click{" "}
-            <Link to={require("../images/boris/boris-johnson-diss.mp4")}>
-              this link
-            </Link>
-            .
-          </P>
+          <DissTrackVideo />
+          
           <br />
 
           {/* <!-- Sharingbutton Facebook --> */}
