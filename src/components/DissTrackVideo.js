@@ -2,7 +2,8 @@ import React from "react"
 
 import QierPlayer from "qier-player"
 import theme from "../constants/theme"
-import {  P } from "./EasyText"
+import { P } from "./EasyText"
+import Link from "./Link"
 
 export default function DissTrackVideo() {
   return (
@@ -18,7 +19,9 @@ export default function DissTrackVideo() {
       <br />
       <P paragraph>
         If the video won't play, click{" "}
-        <Link to={require("../images/boris/video/boris-johnson-diss.1080.compressed.mp4")}>
+        <Link
+          to={require("../images/boris/video/boris-johnson-diss.1080.compressed.mp4")}
+        >
           this link
         </Link>
         .
