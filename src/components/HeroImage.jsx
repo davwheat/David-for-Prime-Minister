@@ -13,6 +13,15 @@ const useStyles = makeStyles(() => ({
     willChange: "transform",
   },
   img: {
+    // try to improve animate performance
+    "-webkit-backface-visibility": "hidden",
+    "-webkit-perspective": 1000,
+    "-webkit-transform": "translateZ(0)",
+    "backface-visibility": "hidden",
+    perspective: 1000,
+    transform: "translateZ(0)",
+    willChange: "filter",
+
     width: "calc(100% + 26px)",
     height: "100%",
     objectFit: "cover",
@@ -70,7 +79,10 @@ export default function HeroImage({ customImg, customAlt, customQuote }) {
         10}px)`
     }
 
-    window.addEventListener("scroll", updateImageStyles)
+    window.addEventListener("scroll", updateImageStyles, {
+      capture: true,
+      passive: true,
+    })
 
     return () => window.removeEventListener("scroll", updateImageStyles)
   }, [])
