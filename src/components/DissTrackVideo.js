@@ -18,7 +18,7 @@ export default function DissTrackVideo() {
       <br />
       <P paragraph>
         If the video won't play, click{" "}
-        <Link to={require("../images/boris/boris-johnson-diss.mp4")}>
+        <Link to={require("../images/boris/video/boris-johnson-diss.1080.compressed.mp4")}>
           this link
         </Link>
         .
