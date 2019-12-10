@@ -70,15 +70,33 @@ const ManifestoPage = () => {
             style={{ display: "block", width: "100%" }}
             controls
             disablePictureInPicture
+            autobuffer
+            playsInline
             draggable="false"
             poster={require("../images/boris/boris-thumbs-up.jpg")}
             preload="auto"
+            onClick={e => {
+              e.target.play()
+            }}
           >
             <source
               src={require("../images/boris/boris-johnson-diss.mp4")}
               type="video/mp4"
             />
+            <source
+              src={require("../images/boris/boris-johnson-diss.webm")}
+              type="video/webm"
+            />
           </video>
+          <br />
+
+          <P paragraph>
+            If the video won't play, click{" "}
+            <Link to={require("../images/boris/boris-johnson-diss.mp4")}>
+              this link
+            </Link>
+            .
+          </P>
           <br />
 
           {/* <!-- Sharingbutton Facebook --> */}
