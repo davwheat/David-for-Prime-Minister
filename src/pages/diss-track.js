@@ -59,6 +59,10 @@ const ManifestoPage = () => {
             />
           </video>
           <br />
+          
+          <P paragraph>
+            If the video won't play, click <Link to={require("../images/boris/boris-johnson-diss.mp4")}>this link</Link>.
+          </P>
 
           {/* <!-- Sharingbutton Facebook --> */}
           <a
