@@ -21,7 +21,7 @@ const ManifestoPage = () => {
 
       <HeroImage
         customImg={require("../images/boris/banner.jpg")}
-        customQuote={`Vote Boris Gone-son!`}
+        customQuote={`Vote Boris Gone‑son!`}
         customAlt={`Black and white image of Boris Johnson looking scared on a red background.`}
       />
 
@@ -41,7 +41,7 @@ const ManifestoPage = () => {
         <section id="goneson">
           <H1 gutterBottom>The Boris Johnson Diss Track</H1>
           <P paragraph>
-            Your vote matters, so make sure you use it to vote Boris Gone-son to
+            Your vote matters, so make sure you use it to vote Boris Gone‑son to
             prevent the continuation of Conservative austerity.
           </P>
 
