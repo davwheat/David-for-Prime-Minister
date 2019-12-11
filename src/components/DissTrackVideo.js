@@ -1,6 +1,6 @@
 import React from "react"
 
-import QierPlayer from "qier-player"
+// import QierPlayer from "qier-player"
 import theme from "../constants/theme"
 import { P } from "./EasyText"
 import Link from "./Link"
