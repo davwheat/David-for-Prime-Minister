@@ -5,7 +5,7 @@ import { Parallax } from "react-scroll-parallax"
 import { useTheme, makeStyles } from "@material-ui/core"
 import { H1 } from "./EasyText"
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(theme => ({
   hero: {
     height: 600,
     overflow: "hidden",
@@ -27,6 +27,10 @@ const useStyles = makeStyles(() => ({
     objectFit: "cover",
     marginLeft: -13,
     marginRight: -13,
+
+    [theme.breakpoints.down("sm")]: {
+      filter: "none !important",
+    },
   },
 }))
 
@@ -66,6 +70,8 @@ export default function HeroImage({ customImg, customAlt, customQuote }) {
 
   useEffect(() => {
     const updateImageStyles = () => {
+      if (window.innerWidth <= 600) return
+
       const element = imageRef.current
 
       const pct = percentWithinViewport(element)
@@ -93,7 +99,7 @@ export default function HeroImage({ customImg, customAlt, customQuote }) {
         className={classes.hero}
         styleInner={{ height: "100%", width: "100%", willChange: "transform" }}
         tagOuter="div"
-        y={[-75, 50]}
+        y={[-50, 50]}
       >
         <img
           alt={
