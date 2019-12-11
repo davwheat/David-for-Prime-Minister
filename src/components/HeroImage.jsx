@@ -109,7 +109,7 @@ export default function HeroImage({ customImg, customAlt, customQuote }) {
                 : ``
               : "Photo of party leader: David Wheatley"
           }
-          src={customImg ? customImg : require("../images/hero.png")}
+          src={customImg ? customImg : require("../images/main.jpg")}
           className={classes.img}
           ref={imageRef}
         />
