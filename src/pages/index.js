@@ -75,28 +75,27 @@ const IndexPage = () => {
             <P paragraph style={{ fontWeight: 600 }}>
               This general election is a chance to deliver real change; change
               that no other party will bring. This is your opportunity to
-              tranform our school, so that it works not just for a few, but for
-              all of us. This manifesto sets out how a Big Dave government will
-              deliver this.
+              tranform our parliament and country, so that it works not just
+              for a few, but for all of us. This manifesto sets out how a Big
+              Dave government will deliver this.
             </P>
             <P paragraph>
               Some people say this is the Brexit election. But it's also the
-              climate change election, the poverty election, the Africa by Toto
+              climate change election, the poverty election, the healthcare 
               election, the education election. But, above all, it's the change
               election.
             </P>
             <P paragraph>
               It is finally time to take back the political reigns from the
               privileged few that control our parliament, and bring that power
-              back to the normal students, like you and I.
+              back to the normal people, like you and I.
             </P>
             <P paragraph>
-              I am not prepared to put up with students blighted by lack of
-              investmemt, endless price increases to canteen food, and millions
-              of sheets of paper being printed each year.
+              I am not prepared to put up with members public blighted by lack of
+              investmemt, endless tax increases, and the world of their children and children's children being forever destroyed by our current harmful habits.
             </P>
             <P paragraph style={{ fontWeight: 600 }}>
-              This is an election of change. And I plan to bring it.
+              This is an election of change, and I plan to bring it.
             </P>
             <footer>
               <P2>{`- David "Big Dave" Wheatley`}</P2>
@@ -125,6 +124,9 @@ const IndexPage = () => {
               <li>
                 Invest in mental health improvement schemes, reflecting our
                 country's changing needs;
+              </li>
+              <li>
+                Become a carbon neutral country by 2040;
               </li>
               <li>
                 Reverse{" "}
