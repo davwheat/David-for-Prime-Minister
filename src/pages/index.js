@@ -12,6 +12,8 @@ import { makeStyles } from "@material-ui/styles"
 import PageNavSidebar from "../components/PageSidebar"
 import { CustomButton } from "../components/material/Button"
 
+const winner = "<INSERT PARTY NAME HERE>"
+
 const useStyles = makeStyles(() => ({
   semiBoldStrongs: {
     "& strong": {
@@ -32,7 +34,7 @@ const IndexPage = () => {
 
       <PageNavSidebar
         menuItems={[
-          { text: "The New PM", anchor: "#win" },
+          { text: "Thank You", anchor: "#thanks" },
           { text: "Foreword", anchor: "#foreword" },
           { text: "Our Priorities", anchor: "#priorities" },
           { text: "The Team", anchor: "#the-team" },
@@ -47,8 +49,8 @@ const IndexPage = () => {
           marginTop: -4,
         }}
       >
-        <section id="win">
-          <H1 gutterBottom>The New Prime Minister</H1>
+        <section id="thanks">
+          <H1 gutterBottom>Thank You</H1>
           <blockquote>
             <P paragraph style={{ fontWeight: 600 }}>
               I would like to thank everyone that voted for taking part in our
@@ -66,14 +68,19 @@ const IndexPage = () => {
               and question time. You were all brilliant.
             </P>
             <P paragraph>
-              However, now is not a time of celebration for the Big Dave party:
-              we have five years ahead of us, and we need to start putting our
-              policies into effect. As we promised, we will begin with
-              allocating the extra funding to the NHS and our schools which they
-              desperately need.
+              I would like to particularly congratulate {winner} on their
+              fantastic win in this general election of change. The people have
+              voted and their vote is what matters.
+            </P>
+
+            <P paragraph>
+              Now is not a time of celebration for the Big Dave party: we have
+              five years ahead of us, and we need to start following the will of
+              the people. We will still try our hardest to enact our policies
+              into effect.
             </P>
             <P paragraph style={{ fontWeight: 600 }}>
-              This was an election of change. And we brought it.
+              This was an election of change. And you brought it.
             </P>
             <footer>
               <P2>{`- David "Big Dave" Wheatley`}</P2>
