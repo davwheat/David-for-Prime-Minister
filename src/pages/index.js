@@ -32,6 +32,7 @@ const IndexPage = () => {
 
       <PageNavSidebar
         menuItems={[
+          { text: "The New PM", anchor: "#win" },
           { text: "Foreword", anchor: "#foreword" },
           { text: "Our Priorities", anchor: "#priorities" },
           { text: "The Team", anchor: "#the-team" },
@@ -46,6 +47,42 @@ const IndexPage = () => {
           marginTop: -4,
         }}
       >
+        <section id="win">
+          <H1 gutterBottom>The New Prime Minister</H1>
+          <blockquote>
+            <P paragraph style={{ fontWeight: 600 }}>
+              I would like to thank everyone that voted for taking part in our
+              democracy and showing what they stand for.
+            </P>
+            <P paragraph>
+              Thank you to the whole Big Dave team for constantly backing me in
+              the best and the worst of times. I really appreciate your support
+              and hope you all will continue supporting me for the foreseeable
+              future.
+            </P>
+            <P paragraph>
+              I would like to congratulate all of the other parties for their
+              hard campaigning and for their time yesterday in our final debate
+              and question time. You were all brilliant.
+            </P>
+            <P paragraph>
+              However, now is not a time of celebration for the Big Dave party:
+              we have five years ahead of us, and we need to start putting our
+              policies into effect. As we promised, we will begin with
+              allocating the extra funding to the NHS and our schools which they
+              desperately need.
+            </P>
+            <P paragraph style={{ fontWeight: 600 }}>
+              This was an election of change. And we brought it.
+            </P>
+            <footer>
+              <P2>{`- David "Big Dave" Wheatley`}</P2>
+            </footer>
+          </blockquote>
+        </section>
+
+        <hr className="custom" />
+
         <section
           id="links"
           style={{
