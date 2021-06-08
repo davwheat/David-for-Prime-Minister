@@ -23,22 +23,19 @@
     "gatsby-source-filesystem": "^3.6.0",
     "gatsby-transformer-sharp": "^3.6.0",
     "mdi-react": "^7.5.0",
-    "notistack": "^0.9.17",
     "preact": "^10.5.13",
     "preact-render-to-string": "^5.1.19",
     "prop-types": "^15.7.2",
-    "qier-player": "github:davwheat/qier-player",
     "react": "^17.0.2",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-cookie-consent": "^6.2.4",
-    "react-dom": "^16.14.0",
+    "react-dom": "^17.0.2",
     "react-helmet": "^5.2.1",
     "react-scroll-parallax": "^2.4.0",
     "styled-components": "^4.4.1",
     "xolor": "^1.2.0"
   },
   "devDependencies": {
-    "gatsby-plugin-remove-trailing-slashes": "^2.10.0",
     "prettier": "^2.3.1"
   },
   "keywords": [
@@ -49,6 +46,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
