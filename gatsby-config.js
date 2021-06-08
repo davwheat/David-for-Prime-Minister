@@ -1,37 +1,17 @@
 /* eslint-disable */
 
-const workboxConfig = {
-  runtimeCaching: [
-    {
-      // Use cacheFirst since these don't need to be revalidated (same RegExp
-      // and same reason as above)
-      urlPattern: /(\.js$|\.css$|static\/)/,
-      handler: `CacheFirst`,
-    },
-    {
-      // page-data.json files are not content hashed
-      urlPattern: /^https?:.*\page-data\/.*\/page-data\.json/,
-      handler: `NetworkFirst`,
-    },
-    {
-      // Add runtime caching of various other page resources
-      urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
-      handler: `StaleWhileRevalidate`,
-    },
-  ],
-  // Set skipWaiting to false. That's the only change in config.
-  skipWaiting: false,
-  clientsClaim: true,
-}
-
 module.exports = {
+  flags: {
+    FAST_DEV: true,
+  },
   siteMetadata: {
     title: `David for PM`,
     description: `Vote David for your next Oathall Prime Minister. "If nothing else, we're radical."`,
-    author: `@davwheat`,
-    siteUrl: "https://david4pm.co.uk",
+    author: `@davwheat_`,
+    siteUrl: 'https://david4pm.co.uk',
   },
   plugins: [
+    `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-material-ui`,
@@ -42,6 +22,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-remove-serviceworker`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -55,41 +36,37 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        appendScript: require.resolve(`./src/sw.js`),
-        workboxConfig,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-firebase",
-      options: {
-        features: {
-          auth: false,
-          database: false,
-          firestore: false,
-          storage: false,
-          messaging: false,
-          functions: false,
-          analytics: true,
-        },
-        credentials: {
-          apiKey: "AIzaSyCKEaK9XKAaaOx77xyCZ5o3fC0gMjNyjpg",
-          authDomain: "david-for-pm.firebaseapp.com",
-          databaseURL: "https://david-for-pm.firebaseio.com",
-          projectId: "david-for-pm",
-          storageBucket: "david-for-pm.appspot.com",
-          messagingSenderId: "1057366173215",
-          appId: "1:1057366173215:web:fafbc43a64fad92325572a",
-          measurementId: "G-406XJLDHX6",
-        },
-      },
-    },
-    {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         // exclude: [`/admin`],
       },
-    },`gatsby-plugin-remove-trailing-slashes`,
+    },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, // Needed for dynamic images
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `team-images`,
+        path: `${__dirname}/src/images/the-team/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `priorities-images`,
+        path: `${__dirname}/src/images/priorities/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `header-images`,
+        path: `${__dirname}/src/images/headerImg/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
   ],
 }

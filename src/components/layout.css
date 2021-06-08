@@ -3,7 +3,7 @@
 code,
 pre,
 .monospace-font {
-  font-family: "Fira Mono", "Fira Code", "Consolas", monospace !important;
+  font-family: 'Fira Mono', 'Fira Code', 'Consolas', monospace !important;
 }
 
 code {
@@ -32,6 +32,7 @@ body,
   min-height: 100% !important;
   min-height: 100vh !important;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 #gatsby-focus-wrapper {
@@ -40,16 +41,18 @@ body,
 
 .footer-icon {
   -webkit-transform: translateY(4px);
-      -ms-transform: translateY(4px);
-          transform: translateY(4px);
+  -ms-transform: translateY(4px);
+  transform: translateY(4px);
   margin-right: 2px;
 }
 
-a.no-underline:-webkit-any-link:hover *, a.no-underline:-webkit-any-link:hover {
+a.no-underline:-webkit-any-link:hover *,
+a.no-underline:-webkit-any-link:hover {
   text-decoration: none !important;
 }
 
-a.no-underline:-moz-any-link:hover *, a.no-underline:-moz-any-link:hover {
+a.no-underline:-moz-any-link:hover *,
+a.no-underline:-moz-any-link:hover {
   text-decoration: none !important;
 }
 
@@ -68,13 +71,13 @@ blockquote {
   border-left: 10px solid #ccc;
   margin: 0.5em 10px;
   padding: 0 10px;
-  quotes: "“" "”";
+  quotes: '“' '”';
   padding: 10px 20px;
   margin-bottom: 32px;
 }
 
 blockquote:before {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   content: open-quote;
   display: inline;
   line-height: 0;
@@ -92,10 +95,10 @@ blockquote > footer {
 }
 
 q {
-  quotes: "“" "”" "‘" "’";
+  quotes: '“' '”' '‘' '’';
 }
 q:before {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: rgba(0, 0, 0, 0.75);
   -webkit-text-stroke: 0;
   content: open-quote;
@@ -104,7 +107,7 @@ q:before {
   padding-right: 4px;
 }
 q:after {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: rgba(0, 0, 0, 0.75);
   -webkit-text-stroke: 0;
   content: close-quote;
@@ -123,7 +126,7 @@ hr.custom {
   margin: 32px 0;
   width: 100%;
   height: 4px;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAFCAYAAAAHQL+kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAArSURBVDhPY2xqavrPQGNw6tQppc2bN9+HcmkCmKD0kAejHhlsYJh4hIEBADLACAfgepqCAAAAAElFTkSuQmCC")
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAFCAYAAAAHQL+kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAArSURBVDhPY2xqavrPQGNw6tQppc2bN9+HcmkCmKD0kAejHhlsYJh4hIEBADLACAfgepqCAAAAAElFTkSuQmCC')
     repeat-x center center;
 }
 

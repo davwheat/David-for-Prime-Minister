@@ -1,5 +1,5 @@
-import React, { useEffect } from "react"
-import { useController } from "react-scroll-parallax"
+import React, { useEffect } from 'react'
+import { useController } from 'react-scroll-parallax'
 
 export default function ParallaxUpdater() {
   try {

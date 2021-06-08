@@ -1,20 +1,20 @@
-import React from "react"
+import React from 'react'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
-import { Container, useTheme } from "@material-ui/core"
-import { H1, P, P2 } from "../components/EasyText"
-import HeroImage from "../components/HeroImage"
-import Link from "../components/Link"
-import TheTeam from "../components/Team"
-import { makeStyles } from "@material-ui/styles"
-import PageNavSidebar from "../components/PageSidebar"
-import { CustomButton } from "../components/material/Button"
+import { Container, useTheme } from '@material-ui/core'
+import { H1, P, P2 } from '../components/EasyText'
+import HeroImage from '../components/HeroImage'
+import Link from '../components/Link'
+import TheTeam from '../components/Team'
+import { makeStyles } from '@material-ui/styles'
+import PageNavSidebar from '../components/PageSidebar'
+import { CustomButton } from '../components/material/Button'
 
 const useStyles = makeStyles(() => ({
   semiBoldStrongs: {
-    "& strong": {
+    '& strong': {
       fontWeight: 600,
     },
   },
@@ -32,10 +32,10 @@ const IndexPage = () => {
 
       <PageNavSidebar
         menuItems={[
-          { text: "The New PM", anchor: "#win" },
-          { text: "Foreword", anchor: "#foreword" },
-          { text: "Our Priorities", anchor: "#priorities" },
-          { text: "The Team", anchor: "#the-team" },
+          { text: 'The New PM', anchor: '#win' },
+          { text: 'Foreword', anchor: '#foreword' },
+          { text: 'Our Priorities', anchor: '#priorities' },
+          { text: 'The Team', anchor: '#the-team' },
         ]}
       />
 
@@ -51,25 +51,19 @@ const IndexPage = () => {
           <H1 gutterBottom>The New Prime Minister</H1>
           <blockquote>
             <P paragraph style={{ fontWeight: 600 }}>
-              I would like to thank everyone that voted for taking part in our
-              democracy and showing what they stand for.
+              I would like to thank everyone that voted for taking part in our democracy and showing what they stand for.
             </P>
             <P paragraph>
-              Thank you to the whole Big Dave team for constantly backing me in
-              the best and the worst of times. I really appreciate your support
-              and hope you all will continue supporting me for the foreseeable
-              future.
+              Thank you to the whole Big Dave team for constantly backing me in the best and the worst of times. I really appreciate your support
+              and hope you all will continue supporting me for the foreseeable future.
             </P>
             <P paragraph>
-              I would like to congratulate all of the other parties for their
-              hard campaigning and for their time yesterday in our final debate
+              I would like to congratulate all of the other parties for their hard campaigning and for their time yesterday in our final debate
               and question time. You were all brilliant.
             </P>
             <P paragraph>
-              However, now is not a time of celebration for the Big Dave party:
-              we have five years ahead of us, and we need to start putting our
-              policies into effect. As we promised, we will begin with
-              allocating the extra funding to the NHS and our schools which they
+              However, now is not a time of celebration for the Big Dave party: we have five years ahead of us, and we need to start putting our
+              policies into effect. As we promised, we will begin with allocating the extra funding to the NHS and our schools which they
               desperately need.
             </P>
             <P paragraph style={{ fontWeight: 600 }}>
@@ -86,12 +80,12 @@ const IndexPage = () => {
         <section
           id="links"
           style={{
-            display: "flex",
-            flexWrap: "wrap",
-            flexDirection: "row",
-            alignItems: "space-evenly",
-            justifyContent: "space-evenly",
-            "& > *": {
+            display: 'flex',
+            flexWrap: 'wrap',
+            flexDirection: 'row',
+            alignItems: 'space-evenly',
+            justifyContent: 'space-evenly',
+            '& > *': {
               margin: theme.spacing(),
             },
           }}
@@ -110,26 +104,21 @@ const IndexPage = () => {
           <H1 gutterBottom>Foreword</H1>
           <blockquote>
             <P paragraph style={{ fontWeight: 600 }}>
-              This general election is a chance to deliver real change; change
-              that no other party will bring. This is your opportunity to
-              tranform our parliament and country, so that it works not just
-              for a few, but for all of us. This manifesto sets out how a Big
-              Dave government will deliver this.
+              This general election is a chance to deliver real change; change that no other party will bring. This is your opportunity to
+              tranform our parliament and country, so that it works not just for a few, but for all of us. This manifesto sets out how a Big Dave
+              government will deliver this.
             </P>
             <P paragraph>
-              Some people say this is the Brexit election. But it's also the
-              climate change election, the poverty election, the healthcare 
-              election, the education election. But, above all, it's the change
-              election.
+              Some people say this is the Brexit election. But it's also the climate change election, the poverty election, the healthcare
+              election, the education election. But, above all, it's the change election.
             </P>
             <P paragraph>
-              It is finally time to take back the political reigns from the
-              privileged few that control our parliament, and bring that power
-              back to the normal people, like you and I.
+              It is finally time to take back the political reigns from the privileged few that control our parliament, and bring that power back
+              to the normal people, like you and I.
             </P>
             <P paragraph>
-              I am not prepared to put up with members public blighted by lack of
-              investmemt, endless tax increases, and the world of their children and children's children being forever destroyed by our current harmful habits.
+              I am not prepared to put up with members public blighted by lack of investmemt, endless tax increases, and the world of their
+              children and children's children being forever destroyed by our current harmful habits.
             </P>
             <P paragraph style={{ fontWeight: 600 }}>
               This is an election of change, and I plan to bring it.
@@ -145,41 +134,22 @@ const IndexPage = () => {
         <section id="priorities" className={classes.semiBoldStrongs}>
           <H1 gutterBottom>Our Priorities</H1>
           <P paragraph>
-            Our campaign priorities are <strong>simple</strong>,{" "}
-            <strong>effective</strong>, and <strong>unique</strong> to us.
+            Our campaign priorities are <strong>simple</strong>, <strong>effective</strong>, and <strong>unique</strong> to us.
           </P>
           <P paragraph>
             <ul>
+              <li>Boost funding in the NHS, hire more staff, decrease A&E waiting times;</li>
+              <li>Reform the education system, improve classroom standards, provide more teaching jobs;</li>
+              <li>Invest in mental health improvement schemes, reflecting our country's changing needs;</li>
+              <li>Become a carbon neutral country by 2040;</li>
               <li>
-                Boost funding in the NHS, hire more staff, decrease A&E waiting
-                times;
+                Reverse <Link to="priorities/austerity">Conservative austerity measures</Link>;
               </li>
-              <li>
-                Reform the education system, improve classroom standards,
-                provide more teaching jobs;
-              </li>
-              <li>
-                Invest in mental health improvement schemes, reflecting our
-                country's changing needs;
-              </li>
-              <li>
-                Become a carbon neutral country by 2040;
-              </li>
-              <li>
-                Reverse{" "}
-                <Link to="priorities/austerity">
-                  Conservative austerity measures
-                </Link>
-                ;
-              </li>
-              <li style={{ fontWeight: 900 }}>
-                Redesign the country for the many, not the few;
-              </li>
+              <li style={{ fontWeight: 900 }}>Redesign the country for the many, not the few;</li>
             </ul>
           </P>
           <P paragraph>
-            For our full manifesto, extended descriptions, and explanations,
-            read our <Link to="manifesto">manifesto & priorities page</Link>.
+            For our full manifesto, extended descriptions, and explanations, read our <Link to="manifesto">manifesto & priorities page</Link>.
           </P>
         </section>
 

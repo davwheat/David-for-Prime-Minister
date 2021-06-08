@@ -1,9 +1,9 @@
 /* eslint-disable react/display-name */
 // Add this component to your AppContainer (where your app shell is)
 
-import React, { Component } from "react"
-import { withSnackbar } from "notistack"
-import { Button } from "@material-ui/core"
+import React, { Component } from 'react'
+import { withSnackbar } from 'notistack'
+import { Button } from '@material-ui/core'
 
 // Check for updates every 15 minutes
 const UPDATE_CHECKING_INTERVAL = 15 * 60 * 1000
@@ -19,15 +19,11 @@ class UpdateButton extends Component {
   }
 
   registerServiceWorker = () => {
-    if (
-      typeof window === "undefined" ||
-      typeof navigator === "undefined" ||
-      !navigator.serviceWorker
-    ) {
+    if (typeof window === 'undefined' || typeof navigator === 'undefined' || !navigator.serviceWorker) {
       return
     }
 
-    navigator.serviceWorker.register("/sw.js").then(reg => {
+    navigator.serviceWorker.register('/sw.js').then(reg => {
       if (!navigator.serviceWorker.controller) {
         return
       }
@@ -42,7 +38,7 @@ class UpdateButton extends Component {
       } else if (reg.installing) {
         this.trackInstalling(reg.installing)
       } else {
-        reg.addEventListener("updatefound", () => {
+        reg.addEventListener('updatefound', () => {
           this.trackInstalling(reg.installing)
         })
       }
@@ -50,7 +46,7 @@ class UpdateButton extends Component {
 
     // Listen for the controlling service worker changing
     // and reload the page
-    navigator.serviceWorker.addEventListener("controllerchange", () => {
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
       if (this.refreshing) return
       this.refreshing = true
       window.location.reload()
@@ -58,8 +54,8 @@ class UpdateButton extends Component {
   }
 
   trackInstalling = worker => {
-    worker.addEventListener("statechange", () => {
-      if (worker.state === "installed") {
+    worker.addEventListener('statechange', () => {
+      if (worker.state === 'installed') {
         this.updateReady(worker)
       }
     })
@@ -71,13 +67,13 @@ class UpdateButton extends Component {
       updateHandler: () => {
         this.setState({ showButton: false })
         // Tell the service worker to skipWaiting
-        worker.postMessage({ action: "skipWaiting" })
+        worker.postMessage({ action: 'skipWaiting' })
       },
     })
   }
 
   handleUpdate = () => {
-    if (typeof this.state.updateHandler === "function") {
+    if (typeof this.state.updateHandler === 'function') {
       this.state.updateHandler()
     }
   }
@@ -85,18 +81,14 @@ class UpdateButton extends Component {
   render() {
     if (!this.state.showButton) return null
 
-    this.props.enqueueSnackbar("An update to this site is available", {
+    this.props.enqueueSnackbar('An update to this site is available', {
       action: () => (
-        <Button
-          aria-label="Refresh"
-          onClick={this.handleUpdate}
-          color="inherit"
-        >
+        <Button aria-label="Refresh" onClick={this.handleUpdate} color="inherit">
           Refresh
         </Button>
       ),
       persist: true,
-      variant: "info",
+      variant: 'info',
     })
 
     return null

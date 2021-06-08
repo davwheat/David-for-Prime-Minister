@@ -1,28 +1,16 @@
-import React from "react"
+import React from 'react'
 
-import {
-  makeStyles,
-  Drawer,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  ListSubheader,
-  Slide,
-  Divider,
-  Fade,
-  useTheme,
-} from "@material-ui/core"
+import { makeStyles, Drawer, List, ListItem, ListItemIcon, ListItemText, ListSubheader, Slide, Divider, Fade, useTheme } from '@material-ui/core'
 
-import Link from "../Link"
+import Link from '../Link'
 
-import HomeIcon from "mdi-react/HomeOutlineIcon"
-import ManifestoIcon from "mdi-react/ScriptTextOutlineIcon"
-import WhyUsIcon from "mdi-react/HelpIcon"
+import HomeIcon from 'mdi-react/HomeOutlineIcon'
+import ManifestoIcon from 'mdi-react/ScriptTextOutlineIcon'
+import WhyUsIcon from 'mdi-react/HelpIcon'
 
 const useStyles = makeStyles({
   fullList: {
-    width: "auto",
+    width: 'auto',
     minWidth: 250,
   },
 })
@@ -33,30 +21,25 @@ export default function NavDrawer({ open, closeDrawer }) {
 
   const menuItems = [
     {
-      name: "Home",
-      url: "",
+      name: 'Home',
+      url: '',
       icon: <HomeIcon color={theme.palette.primary.main} />,
     },
     {},
     {
-      name: "Manifesto",
-      url: "manifesto",
+      name: 'Manifesto',
+      url: 'manifesto',
       icon: <ManifestoIcon color={theme.palette.primary.main} />,
     },
     {
-      name: "Why Us?",
-      url: "why-us",
+      name: 'Why Us?',
+      url: 'why-us',
       icon: <WhyUsIcon color={theme.palette.primary.main} />,
     },
   ]
 
   const menu = () => (
-    <div
-      className={classes.fullList}
-      role="presentation"
-      onClick={() => closeDrawer()}
-      onKeyDown={() => closeDrawer()}
-    >
+    <div className={classes.fullList} role="presentation" onClick={() => closeDrawer()} onKeyDown={() => closeDrawer()}>
       <List>
         <Fade in style={{ transitionDelay: 125 }} timeout={200}>
           <ListSubheader
@@ -64,10 +47,10 @@ export default function NavDrawer({ open, closeDrawer }) {
               e.stopPropagation()
             }}
             style={{
-              textTransform: "uppercase",
+              textTransform: 'uppercase',
               fontWeight: 700,
               fontSize: 15,
-              userSelect: "none",
+              userSelect: 'none',
             }}
             color="default"
           >
@@ -76,13 +59,7 @@ export default function NavDrawer({ open, closeDrawer }) {
         </Fade>
         {menuItems.map((item, index) => {
           return item.name ? (
-            <Slide
-              direction="right"
-              in
-              style={{ transitionDelay: index * 60 + 150 }}
-              timeout={180}
-              key={index}
-            >
+            <Slide direction="right" in style={{ transitionDelay: index * 60 + 150 }} timeout={180} key={index}>
               <div>
                 <ListItem button component={Link} to={item.url}>
                   <ListItemIcon>{item.icon}</ListItemIcon>

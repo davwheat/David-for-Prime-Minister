@@ -1,8 +1,8 @@
-import React from "react"
+import React from 'react'
 
-import styled, { keyframes } from "styled-components"
-import { Button } from "@material-ui/core"
-import theme from "../../constants/theme"
+import styled, { keyframes } from 'styled-components'
+import { Button } from '@material-ui/core'
+import theme from '../../constants/theme'
 
 const borderAnimation = keyframes`
   0% {
@@ -50,13 +50,13 @@ export const CustomButton = styled(Btn)`
     background-color: ${theme.palette.primary.main};
     color: ${theme.palette.getContrastText(theme.palette.primary.main)};
 
-    padding: ${props => (props.size === "big" ? "16px 32px" : "8px 16px")};
-    font-size: ${props => (props.size === "big" ? "1.25rem" : "0.875rem")};
-    line-height: ${props => (props.size === "big" ? "1" : "1.75")};
+    padding: ${props => (props.size === 'big' ? '16px 32px' : '8px 16px')};
+    font-size: ${props => (props.size === 'big' ? '1.25rem' : '0.875rem')};
+    line-height: ${props => (props.size === 'big' ? '1' : '1.75')};
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       width: 2px;
       height: 0;
       position: absolute;
@@ -87,7 +87,7 @@ export const CustomButton = styled(Btn)`
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       width: 0;
       height: 2px;
       position: absolute;

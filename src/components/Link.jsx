@@ -1,31 +1,20 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import {
-  Link as MatLink,
-  Button,
-  makeStyles,
-  useTheme,
-} from "@material-ui/core"
-import { Link as GatsbyLink } from "gatsby"
-import AnchorLink from "react-anchor-link-smooth-scroll"
+import { Link as MatLink, Button, makeStyles, useTheme } from '@material-ui/core'
+import { Link as GatsbyLink } from 'gatsby'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-import ExternalLinkIcon from "mdi-react/ExternalLinkIcon"
+import ExternalLinkIcon from 'mdi-react/ExternalLinkIcon'
 
 // eslint-disable-next-line react/display-name
 const AdapterLink = React.forwardRef((props, ref) => {
-  return (
-    <GatsbyLink
-      style={{ textDecoration: "none !important" }}
-      innerRef={ref}
-      {...props}
-    />
-  )
+  return <GatsbyLink style={{ textDecoration: 'none !important' }} innerRef={ref} {...props} />
 })
 
 const styles = makeStyles(() => ({
   externalLinkIcon: {
-    display: "inline-block",
+    display: 'inline-block',
     marginBottom: 2,
   },
 }))
@@ -38,11 +27,7 @@ const Link = props => {
 
   const AnchorOffset = 84
 
-  if (
-    to.startsWith("https://") ||
-    to.startsWith("http://") ||
-    to.startsWith("//")
-  ) {
+  if (to.startsWith('https://') || to.startsWith('http://') || to.startsWith('//')) {
     if (linkIsButton === true) {
       return (
         <Button
@@ -51,64 +36,36 @@ const Link = props => {
           {...newprops}
           target="_blank"
           rel="noopener"
-          endIcon={
-            hasExternalLinkIcon ? (
-              <ExternalLinkIcon
-                size={14}
-                className={classes.externalLinkIcon}
-              />
-            ) : null
-          }
+          endIcon={hasExternalLinkIcon ? <ExternalLinkIcon size={14} className={classes.externalLinkIcon} /> : null}
         >
           {children}
         </Button>
       )
     } else {
       return (
-        <MatLink
-          href={to}
-          color="secondary"
-          {...newprops}
-          target="_blank"
-          rel="noopener"
-          component="a"
-        >
+        <MatLink href={to} color="secondary" {...newprops} target="_blank" rel="noopener" component="a">
           {children}
-          {hasExternalLinkIcon ? (
-            <ExternalLinkIcon size={14} className={classes.externalLinkIcon} />
-          ) : null}
+          {hasExternalLinkIcon ? <ExternalLinkIcon size={14} className={classes.externalLinkIcon} /> : null}
         </MatLink>
       )
     }
-  } else if (to.startsWith("#")) {
+  } else if (to.startsWith('#')) {
     if (linkIsButton === true) {
       return (
-        <Button
-          component={AnchorLink}
-          offset={AnchorOffset}
-          href={to}
-          {...newprops}
-          target="_blank"
-          rel="noopener"
-        >
+        <Button component={AnchorLink} offset={AnchorOffset} href={to} {...newprops} target="_blank" rel="noopener">
           {children}
         </Button>
       )
     } else {
       return (
-        <AnchorLink
-          style={{ color: theme.palette.secondary.main }}
-          offset={AnchorOffset}
-          href={to}
-          {...newprops}
-        >
+        <AnchorLink style={{ color: theme.palette.secondary.main }} offset={AnchorOffset} href={to} {...newprops}>
           {children}
         </AnchorLink>
       )
     }
   } else {
     if (linkIsButton === true) {
-      if (to.startsWith("/")) {
+      if (to.startsWith('/')) {
         return (
           <Button component="a" href={to} {...newprops}>
             {children}
@@ -122,7 +79,7 @@ const Link = props => {
         )
       }
     } else {
-      if (to.startsWith("/")) {
+      if (to.startsWith('/')) {
         return (
           <MatLink component="a" href={to} {...newprops} color="secondary">
             {children}
@@ -130,12 +87,7 @@ const Link = props => {
         )
       } else {
         return (
-          <MatLink
-            component={GatsbyLink}
-            to={`/` + to}
-            color="secondary"
-            {...newprops}
-          >
+          <MatLink component={GatsbyLink} to={`/` + to} color="secondary" {...newprops}>
             {children}
           </MatLink>
         )

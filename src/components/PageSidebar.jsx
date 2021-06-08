@@ -1,64 +1,57 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 
-import {
-  Paper,
-  List,
-  ListItem,
-  ListItemText,
-  ListSubheader,
-  Fab,
-} from "@material-ui/core"
-import Link from "./Link"
-import { makeStyles } from "@material-ui/styles"
+import { Paper, List, ListItem, ListItemText, ListSubheader, Fab } from '@material-ui/core'
+import Link from './Link'
+import { makeStyles } from '@material-ui/styles'
 
-import ExpandMore from "@material-ui/icons/ExpandMoreOutlined"
-import clsx from "clsx"
+import ExpandMore from '@material-ui/icons/ExpandMoreOutlined'
+import clsx from 'clsx'
 
 const useStyles = makeStyles(theme => ({
   root: {
     marginTop: theme.spacing(2),
-    overflow: "hidden",
+    overflow: 'hidden',
     zIndex: 999,
-    [theme.breakpoints.down("md")]: {
-      position: "fixed",
+    [theme.breakpoints.down('md')]: {
+      position: 'fixed',
       top: 72,
       right: theme.spacing(),
-      width: "100%",
+      width: '100%',
       maxWidth: 350,
       transform: `translateX(calc(100% + ${theme.spacing()}px))`,
-      transition: theme.transitions.create("transform"),
+      transition: theme.transitions.create('transform'),
     },
-    [theme.breakpoints.up("lg")]: {
-      float: "left",
+    [theme.breakpoints.up('lg')]: {
+      float: 'left',
       top: 72,
       left: theme.spacing(),
-      position: "sticky",
-      width: "calc((100% - 960px) / 2)",
+      position: 'sticky',
+      width: 'calc((100% - 960px) / 2)',
       minWidth: 250,
       maxWidth: `max-content`,
     },
   },
   panelOpen: {
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down('md')]: {
       transform: `translateX(0px)`,
     },
   },
   showContentsButton: {
-    display: "none",
-    transform: "rotate(90deg)",
-    [theme.breakpoints.down("md")]: {
-      display: "flex",
-      position: "fixed",
+    display: 'none',
+    transform: 'rotate(90deg)',
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      position: 'fixed',
       top: 72 + theme.spacing(2),
       right: theme.spacing(),
       zIndex: 9999,
-      transition: theme.transitions.create("transform"),
-      "&[data-open=true]": {
-        transform: "rotate(-90deg)",
-        background: "transparent !important",
-        boxShadow: "none",
-        color: "black",
+      transition: theme.transitions.create('transform'),
+      '&[data-open=true]': {
+        transform: 'rotate(-90deg)',
+        background: 'transparent !important',
+        boxShadow: 'none',
+        color: 'black',
       },
     },
   },
@@ -96,10 +89,10 @@ export default function PageNavSidebar({ menuItems }) {
         <List dense>
           <ListSubheader
             style={{
-              textTransform: "uppercase",
+              textTransform: 'uppercase',
               fontWeight: 700,
               fontSize: 15,
-              userSelect: "none",
+              userSelect: 'none',
             }}
           >
             Page Contents
@@ -121,6 +114,6 @@ PageNavSidebar.propTypes = {
     PropTypes.exact({
       text: PropTypes.string.isRequired,
       anchor: PropTypes.string.isRequired,
-    }).isRequired
+    }).isRequired,
   ).isRequired,
 }

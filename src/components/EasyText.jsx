@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import React from "react"
-import { Typography } from "@material-ui/core"
+import React from 'react'
+import { Typography } from '@material-ui/core'
 
 export const H1 = props => {
   let { gutterBottom, style, ...afterProps } = props
@@ -8,7 +8,7 @@ export const H1 = props => {
   style = style || {}
 
   if (gutterBottom) {
-    style.marginBottom = "0.5em"
+    style.marginBottom = '0.5em'
   }
 
   return (
@@ -24,7 +24,7 @@ export const H2 = props => {
   style = style || {}
 
   if (gutterBottom) {
-    style.marginBottom = "0.5em"
+    style.marginBottom = '0.5em'
   }
 
   return (
@@ -40,7 +40,7 @@ export const H3 = props => {
   style = style || {}
 
   if (gutterBottom) {
-    style.marginBottom = "0.5em"
+    style.marginBottom = '0.5em'
   }
 
   return (
@@ -56,7 +56,7 @@ export const H4 = props => {
   style = style || {}
 
   if (gutterBottom) {
-    style.marginBottom = "0.5em"
+    style.marginBottom = '0.5em'
   }
 
   return (
@@ -72,7 +72,7 @@ export const H5 = props => {
   style = style || {}
 
   if (gutterBottom) {
-    style.marginBottom = "0.5em"
+    style.marginBottom = '0.5em'
   }
 
   return (
@@ -88,7 +88,7 @@ export const H6 = props => {
   style = style || {}
 
   if (gutterBottom) {
-    style.marginBottom = "0.5em"
+    style.marginBottom = '0.5em'
   }
 
   return (
