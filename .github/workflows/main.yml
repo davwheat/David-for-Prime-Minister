@@ -39,7 +39,7 @@ jobs:
         if: steps.yarn-cache.outputs.cache-hit != 'true'
 
       - name: Install project dependencies from cache
-        run: yarn add --cached
+        run: yarn install --immutable --immutable-cache --check-cache
         if: steps.yarn-cache.outputs.cache-hit == 'true'
 
       - name: Cache node_modules for other runs
