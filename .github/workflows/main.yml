@@ -119,7 +119,7 @@ jobs:
 
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/deploy' && github.event_name == 'push'
         with:
           branch: prod
           folder: public
