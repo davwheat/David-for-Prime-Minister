@@ -15,8 +15,6 @@ import { Body2 } from './EasyText'
 import CookieConsent from 'react-cookie-consent'
 
 import theme from '../constants/theme'
-import { ParallaxProvider } from 'react-scroll-parallax'
-import ParallaxUpdater from './ParallaxUpdater'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -53,74 +51,70 @@ const Layout = ({ children }) => {
 
   return (
     <MuiThemeProvider theme={theme}>
-      <ParallaxProvider>
-        <div>
-          <CookieConsent
-            location="bottom"
-            enableDeclineButton={false}
-            buttonText="Sounds good!"
-            cookieName="cookieConsent"
-            style={{ background: '#2B373B' }}
-            expires={365} // consent expires in one year
-            // eslint-disable-next-line no-unused-vars
-            ButtonComponent={({ children, style, ...props }) => {
-              props['variant'] = 'contained'
-              props['color'] = 'primary'
-              props['style'] = { margin: 'auto' }
+      <div>
+        <CookieConsent
+          location="bottom"
+          enableDeclineButton={false}
+          buttonText="Sounds good!"
+          cookieName="cookieConsent"
+          style={{ background: '#2B373B' }}
+          expires={365} // consent expires in one year
+          // eslint-disable-next-line no-unused-vars
+          ButtonComponent={({ children, style, ...props }) => {
+            props['variant'] = 'contained'
+            props['color'] = 'primary'
+            props['style'] = { margin: 'auto' }
 
-              return React.createElement(Button, props, children)
-            }}
-          >
-            For this site to work properly, we need to store cookies on your device.{' '}
-            <span style={{ fontSize: '10px' }}>
-              <Link hasExternalLinkIcon={false} to="http://www.whatarecookies.com/">
-                Learn more about cookies
-              </Link>
-            </span>
-          </CookieConsent>
-          <Header siteTitle={data.site.siteMetadata.title} />
+            return React.createElement(Button, props, children)
+          }}
+        >
+          For this site to work properly, we need to store cookies on your device.{' '}
+          <span style={{ fontSize: '10px' }}>
+            <Link hasExternalLinkIcon={false} to="http://www.whatarecookies.com/">
+              Learn more about cookies
+            </Link>
+          </span>
+        </CookieConsent>
+        <Header siteTitle={data.site.siteMetadata.title} />
 
-          <div style={{ marginBottom: theme.spacing(4) }}>
-            <Box component="main">{children}</Box>
-          </div>
-
-          {LargeScreen ? (
-            <Paper
-              component="footer"
-              style={{
-                position: 'fixed',
-                bottom: 0,
-                padding: theme.spacing(1.5),
-                paddingBottom: theme.spacing(1.75),
-                width: '100vw',
-                borderTopLeftRadius: 8,
-                borderTopRightRadius: 8,
-              }}
-              elevation={12}
-            >
-              {FooterContent}
-            </Paper>
-          ) : (
-            <Paper
-              component="footer"
-              style={{
-                position: 'fixed',
-                bottom: 0,
-                padding: theme.spacing(1),
-                paddingBottom: theme.spacing(1.25),
-                width: '100vw',
-                borderTopLeftRadius: 8,
-                borderTopRightRadius: 8,
-              }}
-              elevation={4}
-            >
-              {FooterContent}
-            </Paper>
-          )}
+        <div style={{ marginBottom: theme.spacing(4) }}>
+          <Box component="main">{children}</Box>
         </div>
 
-        <ParallaxUpdater />
-      </ParallaxProvider>
+        {LargeScreen ? (
+          <Paper
+            component="footer"
+            style={{
+              position: 'fixed',
+              bottom: 0,
+              padding: theme.spacing(1.5),
+              paddingBottom: theme.spacing(1.75),
+              width: '100vw',
+              borderTopLeftRadius: 8,
+              borderTopRightRadius: 8,
+            }}
+            elevation={12}
+          >
+            {FooterContent}
+          </Paper>
+        ) : (
+          <Paper
+            component="footer"
+            style={{
+              position: 'fixed',
+              bottom: 0,
+              padding: theme.spacing(1),
+              paddingBottom: theme.spacing(1.25),
+              width: '100vw',
+              borderTopLeftRadius: 8,
+              borderTopRightRadius: 8,
+            }}
+            elevation={4}
+          >
+            {FooterContent}
+          </Paper>
+        )}
+      </div>
     </MuiThemeProvider>
   )
 }

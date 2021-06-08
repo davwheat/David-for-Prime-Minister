@@ -93,34 +93,34 @@ export default function HeroImage({ customImg, customAlt, customQuote }) {
 
   return (
     <>
-      <Parallax className={classes.hero} styleInner={{ height: '100%', width: '100%', willChange: 'transform' }} tagOuter="div" y={[-50, 50]}>
-        <div ref={imageRef}>
-          <StaticQuery
-            query={graphql`
-              {
-                allFile(filter: { sourceInstanceName: { eq: "header-images" } }) {
-                  nodes {
-                    relativePath
-                    childImageSharp {
-                      gatsbyImageData(width: 1080, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-                    }
+      {/* <Parallax  styleInner={{ height: '100%', width: '100%', willChange: 'transform' }} tagOuter="div" y={[-50, 50]}> */}
+      <div ref={imageRef} className={classes.hero}>
+        <StaticQuery
+          query={graphql`
+            {
+              allFile(filter: { sourceInstanceName: { eq: "header-images" } }) {
+                nodes {
+                  relativePath
+                  childImageSharp {
+                    gatsbyImageData(width: 1080, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
                   }
                 }
               }
-            `}
-            render={data => (
-              <GatsbyImage
-                alt={customAlt || 'Photo of party leader: David Wheatley'}
-                image={getImage(
-                  data.allFile.nodes.find(node => node.relativePath === customImg) ||
-                    data.allFile.nodes.find(node => node.relativePath === 'main.jpg'),
-                )}
-                className={classes.img}
-              />
-            )}
-          />
-        </div>
-      </Parallax>
+            }
+          `}
+          render={data => (
+            <GatsbyImage
+              alt={customAlt || 'Photo of party leader: David Wheatley'}
+              image={getImage(
+                data.allFile.nodes.find(node => node.relativePath === customImg) ||
+                  data.allFile.nodes.find(node => node.relativePath === 'main.jpg'),
+              )}
+              className={classes.img}
+            />
+          )}
+        />
+      </div>
+      {/* </Parallax> */}
       <div
         style={{
           marginTop: -600,
