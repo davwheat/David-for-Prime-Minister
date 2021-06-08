@@ -1,11 +1,3 @@
-/* eslint-disable react/prop-types */
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -16,11 +8,7 @@ import './layout.css'
 import Header from './header'
 import Link from './Link'
 
-import { MuiThemeProvider, Button, Box, useMediaQuery, Paper, IconButton } from '@material-ui/core'
-
-import { SnackbarProvider } from 'notistack'
-
-import CloseIcon from 'mdi-react/CloseIcon'
+import { MuiThemeProvider, Button, Box, useMediaQuery, Paper } from '@material-ui/core'
 
 import { Body2 } from './EasyText'
 
@@ -29,7 +17,6 @@ import CookieConsent from 'react-cookie-consent'
 import theme from '../constants/theme'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import ParallaxUpdater from './ParallaxUpdater'
-import UpdateMessage from './UpdateMessage'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -43,11 +30,6 @@ const Layout = ({ children }) => {
   `)
 
   const LargeScreen = useMediaQuery('(min-width:600px)')
-
-  const notistackRef = React.createRef()
-  const onClickDismiss = key => () => {
-    notistackRef.current.closeSnackbar(key)
-  }
 
   const FooterContent = (
     <>
@@ -99,21 +81,7 @@ const Layout = ({ children }) => {
           <Header siteTitle={data.site.siteMetadata.title} />
 
           <div style={{ marginBottom: theme.spacing(4) }}>
-            <SnackbarProvider
-              preventDuplicate
-              maxSnack={3}
-              autoHideDuration={5000}
-              dense={!LargeScreen}
-              ref={notistackRef}
-              action={key => (
-                <IconButton aria-label="Dismiss notification" onClick={onClickDismiss(key)} size="small" color="inherit">
-                  <CloseIcon />
-                </IconButton>
-              )}
-            >
-              <Box component="main">{children}</Box>
-              <UpdateMessage />
-            </SnackbarProvider>
+            <Box component="main">{children}</Box>
           </div>
 
           {LargeScreen ? (
