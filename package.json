@@ -37,6 +37,7 @@
     "xolor": "^1.2.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "prettier": "^2.3.1"
   },
   "keywords": [
