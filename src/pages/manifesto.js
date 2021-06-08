@@ -94,10 +94,6 @@ const ManifestoPage = () => {
               </li>
             </ul>
           </P>
-          <P2 paragraph>
-            <sup>1</sup> assuming 30 sheets of paper for 3 classes per day, and 10 faculties, totalling approximately 14.7 metric tonnes, or 97
-            trees
-          </P2>
         </section>
 
         <GoBack oneUpUrl={`/`} />
